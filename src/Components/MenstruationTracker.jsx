@@ -29,7 +29,7 @@ const MenstruationTracker = () => {
 
     try {
       // Send the form data to the backend API
-      const response = await fetch("https://cas-ahf6awb0fsc7eyhh.southeastasia-01.azurewebsites.net/tracker-menstruation", {
+      const response = await fetch("http://localhost:3000/track-menstruation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,6 +49,8 @@ const MenstruationTracker = () => {
       // Update the summary state with the backend-provided data
       setSummary(responseData.summary);
       setShowSummary(true); // Switch to the summary view
+      console.log("Response Data:", responseData);
+
     } catch (error) {
       console.error("Error submitting the form:", error.message);
       alert("An error occurred. Please try again.");
