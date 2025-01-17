@@ -29,7 +29,7 @@ const MenstruationTracker = () => {
 
     try {
       // Send the form data to the backend API
-      const response = await fetch("http://localhost:3000/track-menstruation", {
+      const response = await fetch("https://lastnatohpagodnako-bpcjhtb9cnfvhwam.southeastasia-01.azurewebsites.net//track-menstruation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
